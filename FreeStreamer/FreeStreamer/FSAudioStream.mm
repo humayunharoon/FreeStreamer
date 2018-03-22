@@ -334,10 +334,11 @@ public:
 #endif
         
 #if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 60000)
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(interruptionOccurred:)
-                                                     name:AVAudioSessionInterruptionNotification
-                                                   object:nil];
+		// Commented by HH. This method has been over-ridden and a custom implementation implemented.
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(interruptionOccurred:)
+//                                                     name:AVAudioSessionInterruptionNotification
+//                                                   object:nil];
 #endif
     }
     return self;
